@@ -1,6 +1,6 @@
 # MIServerless - A Minimalist Serverless Framework
 
-[English](./docs/en/README-en.md) | [中文](./docs/zh/README-zh.md)
+[English](./README-en.md) | [中文](../zh/README-zh.md)
 
 MIServerless is a lightweight, easy-to-use serverless framework designed for developers who want to build and deploy serverless applications quickly and efficiently. With its minimalist design and simple setup, MIServerless enables you to focus on writing your application's core functionality without the complexity of configuring and managing infrastructure.
 
