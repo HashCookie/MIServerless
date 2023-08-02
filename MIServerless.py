@@ -1,5 +1,3 @@
-#
-#本脚本仅供测试使用
 import requests,time,re,json
 from random import randint
 
@@ -7,14 +5,14 @@ headers = {
     'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
     }
  
-#获取登录code
+#Get logincode
 def get_code(location):
     code_pattern = re.compile("(?<=access=).*?(?=&)")
     code = code_pattern.findall(location)[0]
     #print(code)
     return code
  
-#登录
+#login
 def login(user,password):
     url1 = "https://api-user.huami.com/registrations/+86" + user + "/tokens"
     headers = {
@@ -60,7 +58,7 @@ def login(user,password):
     return login_token,userid
 
  
-#主函数
+#Main function
 def main():     
     login_token = 0
     login_token,userid = login(user,password)
@@ -102,14 +100,14 @@ def main():
     print(result)
     return result
   
-#获取时间戳
+#Get timestamp
 def get_time():
     url = 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp'
     response = requests.get(url,headers=headers).json()
     t = response['data']['t']
     return t
   
-#获取app_token
+#Obtain app_token
 def get_app_token(login_token):
     url = f"https://account-cn.huami.com/v1/client/app_tokens?app_name=com.xiaomi.hm.health&dn=api-user.huami.com%2Capi-mifit.huami.com%2Capp-analytics.huami.com&login_token={login_token}&os_version=4.1.0"
     response = requests.get(url,headers=headers).json()
@@ -144,9 +142,9 @@ def qmsg_send(msg):
 
 # -- 配置 --
 # ------------------------------
-user = "" #小米运动账号
-password = ""  #密码
-step = str(randint(28000,38000))  # 范围内取随机数， 前面不但能大于后面的数
+user = "" #Mi Sports Account
+password = ""  #password
+step = str(randint(28000,38000))  # Generate a random number within a range, where the number in front can be greater than the one behind.
 
 #
 sckey = ''  # 
