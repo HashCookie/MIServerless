@@ -63,7 +63,7 @@ def main():
     login_token = 0
     login_token,userid = login(user,password)
     if login_token == 0:
-        print("登陆失败！")
+        print("Login failed!")
         return "login fail!"
  
     t = get_time()
@@ -140,7 +140,7 @@ def qmsg_send(msg):
         }
     requests.post(qmsg_url, data=data)
 
-# -- 配置 --
+# -- "Configuration" --
 # ------------------------------
 user = "" #Mi Sports Account
 password = ""  #password
