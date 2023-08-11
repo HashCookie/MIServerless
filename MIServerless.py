@@ -94,7 +94,7 @@ def main():
  
     response = requests.post(url, data=data, headers=head).json()
     print(response)
-    result = f"改变步数为 {step}  状态: "+ response['message']
+    result = f"Change the number of steps to {step}  status: "+ response['message']
     server_send(result)
     qmsg_send(result)
     print(result)
