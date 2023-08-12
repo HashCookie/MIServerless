@@ -52,7 +52,7 @@ def login(user,password):
     print("login_token获取成功！")
     print(login_token)
     userid = r2["token_info"]["user_id"]
-    print("userid获取成功！")
+    print("userid Obtain success！")
     print(userid)
  
     return login_token,userid
