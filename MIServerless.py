@@ -9,7 +9,7 @@ headers = {
 def get_code(location):
     code_pattern = re.compile("(?<=access=).*?(?=&)")
     code = code_pattern.findall(location)[0]
-    #print(code)
+
     return code
  
 #login
