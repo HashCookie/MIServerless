@@ -11,7 +11,6 @@ def get_code(location):
 
     return code
  
-#login
 def login(user,password):
     url1 = "https://api-user.huami.com/registrations/+86" + user + "/tokens"
     headers = {
