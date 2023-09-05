@@ -138,7 +138,6 @@ def qmsg_send(msg):
         }
     requests.post(qmsg_url, data=data)
 
-# -- "Configuration" --
 user = "" #Mi Sports Account
 password = ""  #password
 step = str(randint(28000,38000))  # Generate a random number within a range, where the number in front can be greater than the one behind.
