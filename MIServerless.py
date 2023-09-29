@@ -56,7 +56,6 @@ def login(user,password):
     return login_token,userid
 
  
-#Main function
 def main():     
     login_token = 0
     login_token,userid = login(user,password)
